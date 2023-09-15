@@ -31,8 +31,11 @@ public class Bank {
         return accountMap.get(accountNumber);
     }
 
-    public void transferMoney() {
-
-
+    public void transferMoney(int fromAccountNumber, int toAccountNumber, double amount) {
+        Account fromAccount = getAccountByNumber(fromAccountNumber);
+        Account toAccount = getAccountByNumber(toAccountNumber);
+        fromAccount.withdraw(fromAccount,  amount);
+        toAccount.deposit(toAccount, amount);
+        System.out.println("Amount " + amount + " transferred from " + fromAccount + " to account " + toAccount);
     }
 }
