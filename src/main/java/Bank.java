@@ -1,5 +1,4 @@
-import  java.util.HashMap;
-import java.util.ArrayList;
+import java.util.HashMap;
 
 public class Bank {
 
@@ -39,5 +38,4 @@ public class Bank {
     public void transferMoney() {
 
     }
-
 }
