@@ -36,6 +36,10 @@ public class Account implements IAccount{
         System.out.println("Account balance:" + account.balance);
     return account.balance;}
 
+    public String toString() {
+        return "name: " + accountHolderName + ", " + "Account Number: " + accountNumber + ", " + "Account Balance: " + balance;
+    }
+
 
 
 }

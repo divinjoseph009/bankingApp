@@ -3,6 +3,9 @@ public class Main {
 
         Bank bank = new Bank();
         bank.createAccount(100, "Divin");
-        System.out.println("test");
+        bank.createAccount(101, "Sam");
+        bank.createAccount(102, "Edmund");
+        bank.createAccount(2000, "Rais");
+        System.out.println(bank.getAccountByNumber(1));
     }
 }
