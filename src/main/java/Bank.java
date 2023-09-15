@@ -17,14 +17,15 @@ public class Bank {
 
     HashMap<Integer, Account> accountMap = new HashMap<Integer, Account>();
 
-    public void createAccount(double balance) {
+    public void createAccount(double balance, String accountNameHolder) {
         if (!accountMap.containsKey(accountNumber)) {
             Account account = new Account(balance);
-            accountMap.put(accountNumber, Account);
+            account.setAccountHolderName(accountNameHolder);
+            accountMap.put(accountNumber, account);
             System.out.println("Account created");
         }
         else {
-            System.out.println("No!");
+            System.out.println("Account already exists!");
         }
 
 
@@ -32,10 +33,11 @@ public class Bank {
 
     public Account getAccountByNumber() {
 
-        return null;
+        return accountMap.get(accountNumber);
     }
 
     public void transferMoney() {
+
 
     }
 }
